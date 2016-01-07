@@ -331,12 +331,16 @@ const byte LETTERS[106][5] = {
 
 };
 
-const byte GRAPHIC[5][5] = {
+const byte GRAPHIC[9][5] = {
   0,0,0,0,0,
   0,28,62,127,0,           // Speaker cone
   34,28,65,34,28,          // Sound wave
   16,32,16,8,4,            // Check mark
   34,20,8,20,34,           // "X"
+  8,34,65,34,28,                // element1 // my changes
+  34,65,34,10,17,                // element2
+  17,17,17,17,17,                // element3
+  17,31,21,21,14,               // element4
 };
 
 

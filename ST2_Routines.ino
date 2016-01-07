@@ -389,7 +389,7 @@ void setAlarmSub()
     if(ALARMON)
     {   
 //      displayString("A ON"); 
-      displayGraphic(1,0,5);
+      displayGraphic(1,0,5); //index,pos,length
       displayGraphic(2,5,5);
       displayGraphic(0,10,4);
       displayGraphic(3,14,5);
@@ -610,7 +610,7 @@ void DisplaySerialData()
     {
       MessagePointer = 0;
       SUBSTATE =3;
-      char Str2[] = "SpikenzieLabs";
+      char Str2[] = "Happy Holidays";
       for(int i =0; i <= sizeof(Str2); i ++)                            // Show default Scrolling message
       {
         IncomingMessage[i] = Str2[i];
@@ -853,13 +853,18 @@ void graphican()
   case 0:
     SUBSTATE =1;
     scrollCounter = 0;
-    scrollSpeed = 200;
+    scrollSpeed = 100;
     //  soundeffect = false;
     y = 3;
     target =  1;
     targdist = 0;
-    displayString("Worm");
-    delay(250);
+    //displayString("Worm");
+    //delay(250);
+    displayGraphic(5,0,5); //index,pos,length
+    displayGraphic(6,5,5);
+    displayGraphic(7,10,5);
+    displayGraphic(8,15,5);
+    delay(3000);
     break;  
 
   case 1:      
@@ -867,7 +872,7 @@ void graphican()
     if(scrollCounter>scrollSpeed)
     {
 
-      c= c +1;
+      c= c +1; // lenght of screen move objects
       if(c>19)
       {
         c = 0;
